@@ -186,11 +186,13 @@ button {
   margin-right: 10px;
   height: 12px;
   width: 16px;
+  fill: currentColor;
 }
 .link-phone{
   margin-right: 10px;
   height: 16px;
   width: 10px;
+  fill: currentColor;
 }
 
 .menu-link:hover .link-envelope,
@@ -218,7 +220,10 @@ button {
     url(..//images/background-hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px 600px;
+  background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
+
 }
 
 
@@ -473,7 +478,7 @@ button {
 }
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon{
-  --color1:var(--accent-color);
+  fill:var(--accent-color);
 }
 
 .clients-link {
@@ -486,6 +491,7 @@ button {
   height: 60px;
   width: 106px;
   align-self: center;
+  fill: #afb1b8;
 }
 
 
