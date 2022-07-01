@@ -177,17 +177,36 @@ button {
 .auth-nav .item:not(:last-child) {
   margin-right: 50px;
 }
-.auth-nav .link {
+.auth-nav .menu-link {
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
-.menu-nav .item:hover,
-.auth-nav .item:hover,
-.menu-nav .item:focus,
-.auth-nav .item:focus {
-  color: var(--accent-color);
+.link-envelope {
+  margin-right: 10px;
+  height: 12px;
+  width: 16px;
 }
+.link-phone{
+  margin-right: 10px;
+  height: 16px;
+  width: 10px;
+}
+
+.menu-link:hover .link-envelope,
+.menu-link:hover .link-phone,
+.menu-link:focus .link-envelope,
+.menu-link:focus .link-phone {
+    color: var(--accent-color);
+}
+
+.menu-nav .menu-link:hover,
+.auth-nav .menu-link:hover,
+.menu-nav .menu-link:focus,
+.auth-nav .menu-link:focus {
+    color: var(--accent-color);
+}
+
 
 /* hero */
 
@@ -265,6 +284,21 @@ button {
   margin-right: 30px;
 }
 
+.icon-box {
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+}
+.advantages-icon {
+  height: 70px;
+  width: 70px;
+}    
 
 .advantages .subtitle {
   font-weight: 700;
@@ -280,8 +314,9 @@ button {
 .advantages p {
   font-size: 14px;
   line-height: 1.71;
-
 }
+
+
 
 /* tasks */
 
@@ -311,8 +346,13 @@ button {
   color: var(--title-text-color);
 
   margin-bottom: 50px;
+  text-align: center;
+}  
+.clients .section-title {
+  margin-bottom: 50px;
+}  
 
-}
+
 .tasks .thumb{
   display: block;
   width: 100%;
@@ -369,8 +409,88 @@ button {
   line-height: 1.19;
 
 }
+.social-list{
+  display: flex;
+  padding: 16px 32px 0 30px;
+  
+}
+.social-list-item{
+  height: 44px;
+      width: 44px;
+}
+.social-list-item:not(:last-child){
+  margin-right: 10px;
+}
+.social-link {
+  padding: 12px 12px;
+  display: block;
+  height: 44px;
+  width: 44px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon{
+  --color4:var(--main-background-color);
+}
+
+.social-icon{
+  height: 20px;
+  width: 20px;
+  --color4:#AFB1B8;
+}
+
+/* clients */
+
+.clients .section-title{
+  margin-bottom: 50px;
+}
+.clients-list{
+  display: flex;
+}
+.clients-item{
+  height: 92px;
+  width: 170px;    
+}
+.clients-item:not(:last-child){
+  margin-right: 30px;
+}
+.clients-link{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+.clients-link:hover,
+.clients-link:focus{
+  border: 1px solid var(--accent-color);
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon{
+  --color1:var(--accent-color);
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-icon {
+  height: 60px;
+  width: 106px;
+  align-self: center;
+}
+
 
 /* footer */
+
 
 footer {
   background: #2F303A;
@@ -379,8 +499,15 @@ footer {
   padding-bottom: 60px;
 }
 
+.footer .container{
+  display: flex;
+}
+
+.footer-left {
+  margin-right: 70px;
+}
+
 footer .logo {
-  margin-right: 0;
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -408,6 +535,40 @@ footer .logo {
 .address .transparent-address:focus {
   color: var(--accent-color);
 }
+
+.strong {
+  margin-bottom: 20px;
+  
+  display: block;
+  text-transform: uppercase;
+  color: var(--main-background-color);
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.footer .social-list {
+  display: flex;
+  padding: 0;
+}
+
+.footer .social-link{
+  background-color: rgba(255, 255, 255, 0.1);
+  
+}
+
+.footer .social-icon {
+  --color4:var(--main-background-color)
+}
+
+.footer .social-link:hover,
+.footer .social-link:focus {
+  background-color: var(--accent-color);
+}
+
+
+
 
 
 /* portfolio */
